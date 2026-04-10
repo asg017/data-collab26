@@ -1,0 +1,32 @@
+column,type,label,description
+FACID,text,,"FACID is a nine-digit identifier. It is the primary key from the FACILITY table used to track facility information for all facilities stored in the Electronic Licensing Management System (ELMS) for California Department of Public Health, Center of Healthcare Quality, Licensing and Certification Program.  FACID can be used to link this file's facility attributes to the following Open Data files: Healthcare Facility Services and Healthcare Facility Bed Types and Counts."
+FACILITY_NAME,text,,FACNAME is the facility name obtained from the facility's license application form.
+LTC,text,,LTC indicates if healthcare facility is long-term care (LTC) or non-long-term care (NON-LTC).
+FAC_TYPE_CODE,text,,FAC_TYPE_CODE lists the facility type acronym. See Lookup Table.
+FAC_FDR,text,,FAC_FDR lists the facility type roll-up that is used in the Licensing and Certification Fee Development Report and is based on licensure facility types used in the ELMS system. See Lookup Table. 
+DISTRICT_OFFICE,text,,DISTRICT_OFFICE lists the name of the California Department of Public Health (CDPH) Center for Health Care Quality (CHCQ) Licensing & Certification Program (L&C)'s district office that oversees the facility. See Lookup Table for district offices and counties served by each district office. 
+PENALTY_ISSUE_DATE,text,,PENALTY_ISSUE_DATE lists the date the state enforcement action (a penalty or citation) was issued.
+PENALTY_NUMBER,text,,"PENALTY_NUMBER lists he nine-digit enforcement action identifier, unique to each penalty/citation.  In this file there is one record for each penalty/citation issued."
+DISPOSITION,text,,"DISPOSITION lists the current disposition of the enforcement action. This file is limited to state enforcement actions that are  ""Open"" (the facility may still appeal the penalty/citation) or ""Closed"" (the enforcement action is final/penalty paid)."
+PENALTY_TYPE,text,,"PENALTY_TYPE lists the type of the state enforcement action: Administrative Penalty, Citation, Failure to Report Penalty."
+PENALTY_DETAIL,text,,"PENALTY_DETAIL indicates type of state enforcement action and the Health and Safety Code (HSC) reference / violation code. See Lookup Table. Please read the background paper, About Health Facilities' State Enforcement Actions, for detailed information regarding California state enforcement actions."
+PENALTY_CATEGORY,text,,PENALTY_CATEGORY lists the penalty category detail associated with some types of state enforcement actions.  See Lookup Table.
+PENALTY_CATEGORY_OTHER,text,,"PENALTY_CATEGORY_OTHER lists the description of penalty category ""other""."
+VIOLATION_FROM_DATE,text,,VIOLATION_FROM_DATE lists the date the violation was first observed. 
+VIOLATION_TO_DATE,text,,VIOLATION_TO_DATE lists the date the violation ended. 
+APPEALED,text,,"APPEALED indicates 'Yes' = The facility appealed the issuance of the enforcement action. ""No"" = The facility has not appealed.  Enforcement actions may either be appealed directly to court or to an administrative hearing unit. The outcome of the enforcement action and collection of any fines assessed are not final until all appeals have been exhausted (HSC section 1428(b)). The appeal process for federal civil monetary penalties is substantially different and is not in the scope of the current open data file. "
+APPEAL_DUE_DATE,text,,APPEAL_DUE_DATE lists the date by which the facility has to appeal the penalty. 
+APPEAL_RECEIVED_DATE,text,,"APPEAL_RECEIVED_DATE lists the date an appeal was received. If there is no date, the facility did not appeal the penalty. "
+CLASS_ASSESSED_INITIAL,text,,CLASS_ASSESSED_INITIAL lists the class of the state enforcement action when it was initially issued. See Lookup Table.
+CLASS_ASSESSED_FINAL,text,,"If CLASS_ASSESSED_FINAL is NULL, the enforcement action was not appealed/changed.  If populated, it may indicate that the citation assessment changed through the appeal process. See Lookup Table."
+TOTAL_AMOUNT_INITIAL,text,,TOTAL_AMOUNT_INITIAL lists the original penalty amount issued. 
+TOTAL_AMOUNT_DUE_FINAL,text,,"TOTAL_AMOUNT_DUE_FINAL lists the final penalty amount due. Appeals (HSC 1428), continuing penalties (HSC 1425) and trebled penalties (HSC 1428) may affect the penalty amounts. "
+TOTAL_PENALTY_OFFSET_AMOUNT,text,,"TOTAL_PENALTY_OFFSET_AMOUNT lists the offset penalty amount subject to deductions for allowable adjustments:  Allowable adjustments include reduction amount of citations paid @ 65% per HSC Sections 1428.1 and 1424.5(b). Citations paid within 15 days (Class AA or A Citations paid within 30 days for skilled nursing or intermediate care facilities) are reduced by 35%. Amounts reduced or dismissed in appeals and/or settlements, or uncollectable due to bankruptcy (discharged), change of ownership, facility closure or being withdrawn by the Department. "
+TOTAL_COLLECTED_AMOUNT,text,,TOTAL_COLLECTED_AMOUNT lists the penalty amount collected. 
+TOTAL_BALANCE_DUE,text,,TOTAL_BALANCE_DUE lists the balance of the penalty amount that is outstanding. 
+ACLAIMS_VISIT_NUMBER,text,,ACLAIMS_VISIT_NUMBER indicates the survey/visit identifier from the ACLAIMS system (the data system that existed before the Automated Survey Processing Environment [ASPEN] system). 
+EVENTID,text,,EVENTID lists the identification number assigned to the on-site survey. Multiple intakes/allegations can be investigated during one survey.  Also known as Survey ID or InvestID.
+DEATH_RELATED,text,,DEATH_RELATED lists if the investigation(s) is related to the death of at least one patient at the facility. 
+INTAKEID_ALL,text,,"INTAKEID_ALL lists the ASPEN intake identifier of the complaint(s) associated with the survey during which the violation, that resulted in the state enforcement action, was cited. If this column is blank, a relicensure/recertification visit may have been the source of the enforcement action, rather than a complaint investigation.  Or, if the EVENTID is also blank but an ACLAIMS_VISIT_NUMBER exists, the record existed prior to when the intake numbers were tracked. "
+PRIORITY_ALL,text,,"PRIORITY_ALL lists the priority of the complaint intake associated with the penalty.  If blank and an EVENTID exists, a relicensure/recertification visit may be the source of the enforcement action and there will not be an intake priority noted.  If the record was from the ACLAIMS system, intake priorities weren't tracked. "
+SFY,text,,SFY lists the State Fiscal Year (SFY) based on the penalty issue date.

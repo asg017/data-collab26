@@ -1,0 +1,31 @@
+# Large data files
+*.duckdb
+*.xlsx
+california.csv
+oregon.csv
+ccd_directory.csv
+california.txt
+oregon.txt
+
+# Large CSVs in subdirectories
+part_two/data/*.csv
+part_two/data/*.txt
+part_three/data/*.csv
+
+# Small dictionary CSV is tracked explicitly via git add -f
+# ca-dictionary.csv
+
+# Dot files and caches
+.claude*
+.cache/
+.config/
+.local/
+.npm/
+.codex/
+.cursor/
+.gemini/
+.viminfo
+.wget-hsts
+.zcompdump
+.zsh_history
+.sudo_as_admin_successful
